@@ -1,6 +1,7 @@
 import AllNewsData from "./component/AllNewsData";
 import HeadLine from "./component/HeadLine";
 import MainNews from "./component/MainNews";
+import MostReadSection from "./component/MostReadSection";
 
 const allNewsdata = async () => {
   const response = await fetch(
@@ -24,12 +25,16 @@ export default async function Home() {
       <div className="col-span-2 p-2 rounded shadow">
         <MainNews newsData={newsData} />
         </div>
-        <div className="bg-gray-400 p-2 rounded shadow">
+        <div className="bg-gray-200 p-2 rounded shadow">
+          <MostReadSection></MostReadSection>
         </div>
 
     </div>
+
     </div>
-    <AllNewsData></AllNewsData>
+    <AllNewsData >
+      
+    </AllNewsData>
    
     </>
   );

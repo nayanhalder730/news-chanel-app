@@ -22,4 +22,5 @@ export interface CurationData {
   articles: Article[];
 }
 
+
 export type CurationList = CurationData[];
