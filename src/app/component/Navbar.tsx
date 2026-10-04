@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import navLogo from "../../../public/logo.png";
-import NavLink from "./NavLink";
+import Button from "../component/Button";
 
 const NavbarPage = () => {
 
@@ -41,12 +41,7 @@ const NavbarPage = () => {
         </div>
 
         <div className="flex items-center space-x-4">
-          <button className="text-sm font-medium text-gray-700 hover:text-black transition-colors">
-            সাইন ইন
-          </button>
-          <button className="bg-red-700 hover:bg-red-800 text-white text-sm font-medium px-4 py-2 rounded-md shadow-sm transition-all">
-            সাইন আপ
-          </button>
+          <Button></Button>
         </div>
     </div>
     </header>

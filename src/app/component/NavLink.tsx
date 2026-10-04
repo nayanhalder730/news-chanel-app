@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 interface navData {
     "slug":string,
@@ -20,13 +21,17 @@ const NavLink = async () => {
 
   return <div className="flex items-center justify-center space-x-5  bg-gray-100 py-3 shadow-md">
 
-     <button>হোম</button>
+   <Link href="/">
+  <button className="px-4 py-2 rounded-md hover:bg-red-700 transition-colors">
+    হোম
+  </button>
+</Link>
     {
        
-        actualData.map((item: navData) => (
-            <span key={item.slug} >
-                <span className=" mx-2 cursor-pointer  hover:text-red-400">{item.title}</span>
-            </span>
+        actualData.map((item: navData,ind:number) => (
+            <Link key={ind} href={`/newsCategory/${item.slug}`} >
+                <span className=" mx-2 cursor-pointer  hover:text-red-400" >{item.title}</span>
+            </Link>
             
         ))
     }

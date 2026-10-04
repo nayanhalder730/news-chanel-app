@@ -21,6 +21,16 @@ export interface CurationData {
   count: number;
   articles: Article[];
 }
-
+export interface ICategoryResponse {
+  success: boolean;
+  count: number;
+  cachedAt: string;
+  slug: string;
+  topicId: string;
+  title: string;
+  page: number;
+  pageCount: number;
+  data: Article[];
+}
 
 export type CurationList = CurationData[];
