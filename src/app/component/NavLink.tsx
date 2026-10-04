@@ -25,7 +25,7 @@ const NavLink = async () => {
        
         actualData.map((item: navData) => (
             <span key={item.slug} >
-                <span className=" mx-2 cursor-pointer">{item.title}</span>
+                <span className=" mx-2 cursor-pointer  hover:text-red-400">{item.title}</span>
             </span>
             
         ))
